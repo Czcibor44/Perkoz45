@@ -11,7 +11,7 @@ function testTypes() {
     console.log(typeof b);
     console.log(typeof a);
 
-    
+//test dodawania repo do github
 
 
 }
