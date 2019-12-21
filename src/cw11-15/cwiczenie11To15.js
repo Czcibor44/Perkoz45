@@ -9,6 +9,8 @@ function cwiczenie11I12() {
     
     //test zmian z poziomu Github
 
+    //test tworzenia nowej branch
+
     let c = 4;
     let d = 5;
     let e = 6;
