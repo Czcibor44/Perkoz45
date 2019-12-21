@@ -5,7 +5,7 @@ function myFunction() {
     if (person == null || person == ""){
         txt = "Anulowano przez użytkownika";
     } else {
-        txt = "Witaj" + person + "!";
+        txt = "Witaj " + person + "!";
     }
     document.getElementById("demo").innerHTML = txt;
 }
