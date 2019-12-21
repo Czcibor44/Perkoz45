@@ -6,6 +6,8 @@ function cwiczenie11I12() {
     let szerokosc = 4;
     let poleProstokata = dlugosc * szerokosc;
     console.log("pole prostokata wynosi: " + poleProstokata + " cm");
+    
+    //test zmian z poziomu Github
 
     let c = 4;
     let d = 5;
