@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") { // spr czy web storage jest wspierany
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                }  else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "kliknięto" + localStorage.clickcount + "razy";
+            } else {
+                document.getElementById("result").innerHTML = "Niestety webStorage nie jest obsługiwany";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<p><button onclick="clickCounter()" type="button">Naciśnij</button> </p>
+<div id="result"></div>
+</body>
+</html>
