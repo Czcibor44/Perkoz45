@@ -1,0 +1,14 @@
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("mouseout", myThirdFunction);
+x.addEventListener("click", mySecondFunction);
+
+function myFunction() {
+    document.getElementById("demo").innerHTML += "Mouse Over!<br>";
+}
+function mySecondFunction() {
+    document.getElementById("demo").innerHTML += "Mouse Clicked!<br>";
+}
+function myThirdFunction() {
+    document.getElementById("demo").innerHTML += "Mouse Out!<br>";
+}
