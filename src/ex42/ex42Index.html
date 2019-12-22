@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="localDoc()">Request data</button>
+<p id="demo"></p>
+
+<script>
+    function localDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "http://localhost:3000/", true);
+        xhttp.send();
+    }
+</script>
+
+</body>
+</html>
