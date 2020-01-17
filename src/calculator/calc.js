@@ -58,7 +58,9 @@ const performCalculation = {
 
     '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
 
-    '=': (firstOperand, secondOperand) => secondOperand
+    '=': (firstOperand, secondOperand) => secondOperand,
+
+    '%': (firstOperand, secondOperand) => firstOperand % secondOperand,
 };
 
 function resetCalculator() {
@@ -74,6 +76,15 @@ function updateDisplay() {
 }
 
 updateDisplay();
+
+function keyEnter(event) {
+    const x = event.keyCode;         
+    const target1 = String.fromCharCode(x);  
+    if (target1 == 1){ 
+        inputDigit(target1.value);
+        updateDisplay();
+    }
+};
 
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
@@ -103,3 +114,5 @@ keys.addEventListener('click', (event) => {
     inputDigit(target.value);
     updateDisplay();
 });
+
+
