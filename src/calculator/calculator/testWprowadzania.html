@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Press a key on the keyboard in the input field to get the number and character of the pressed key.</p>
+
+<input type="text" size="40" onkeypress="keyEnter(event)">
+
+<p id="demo"></p>
+
+<script>
+function keyEnter(event) {
+    const x = event.keyCode;         
+    const target1 = String.fromCharCode(x);  
+    if (target1 == 1){ 
+        document.getElementById("demo").innerHTML = target1;
+  		}
+    if (target1 == 2){ 
+        document.getElementById("demo").innerHTML = target1;
+		}
+        
+}
+</script>
+
+</body>
+</html>
