@@ -77,14 +77,24 @@ function updateDisplay() {
 
 updateDisplay();
 
-function keyEnter(event) {
-    const x = event.keyCode;         
-    const target1 = String.fromCharCode(x);  
-    if (target1 == 1){ 
-        inputDigit(target1.value);
+window.addEventListener('keydown', (event) => {
+    var t = event.key
+    if (t == "1" || t == "2" || t == "3" || t == "4" || t == "5" || t == "6" || t == "7" || t == "8" || t == "9" || t == "0" || t == "="){ 
+        inputDigit(t);
         updateDisplay();
     }
-};
+
+    if (t == "+" || t == "-" || t == "*" || t == "/" || t == "%"){ 
+        handleOperator(t);
+        updateDisplay();
+    }
+
+    if (t == "."){
+        inputDecimal(t);
+        updateDisplay();
+        return;
+    }
+});
 
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
