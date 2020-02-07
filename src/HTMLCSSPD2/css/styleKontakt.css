@@ -1,0 +1,79 @@
+.grid-container-contact {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(102, 26, 26);
+}
+
+ .kontakt {
+     background-color: lightslategray;
+     
+ }
+
+ .form { 
+    grid-area: form; 
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 1fr;
+    grid-template-rows: 0.2fr 35px 35px 35px 35px 35px 35px 35px;
+    grid-template-areas: "name name name" "title1 input1 input1" "title2 input2 input2" "title3 input3 input3" "title4 input4 input4" ". input4 input4" ". input4 input4" ". button .";
+    padding: 20px;
+    color: rgb(207, 106, 47);
+}
+
+.button{
+    background-color: lightsteelblue;
+}
+
+.name {grid-area: name;}
+.title1 {grid-area: title1;}
+.input1 {grid-area: input1;}
+.title2 {grid-area: title2;}
+.input2 {grid-area: input2;}
+.title3 {grid-area: title3;}
+.input3 {grid-area: input3;}
+.title4 {grid-area: title4;}
+.input4 {grid-area: input4;}
+.button {grid-area: button;}
+
+.map {
+    padding: 20px;
+    color: rgb(207, 106, 47);
+}
+
+ @media screen and (min-width: 820px) {
+
+    .grid-container-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 0.3fr auto 0.5fr 1fr 0.1fr;
+        grid-template-areas: "logo menu menu" "title title title" "kontakt kontakt kontakt" "form form form" "map map map" "footer footer footer";
+        grid-gap: 10px;
+      }
+      
+    .logo { grid-area: logo; }
+
+    .logo img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    
+    .menu { grid-area: menu; }
+
+    .menu a {
+        padding: 20px;
+    }
+    
+    .title { grid-area: title; }
+      
+    .kontakt { grid-area: kontakt; }
+
+    .form { 
+        grid-template-columns: 0.3fr 1fr 1fr;
+        grid-template-areas: "name name name" "title1 input1 ." "title2 input2 ." "title3 input3 ." "title4 input4 ." ". input4 ." ". input4 ." ". button .";
+    }
+
+    .map {grid-area: map;}
+
+    .footer { 
+        grid-area: footer; }
+}

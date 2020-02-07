@@ -1,0 +1,59 @@
+.grid-container-oferta {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgb(102, 26, 26);
+}
+ .oferta {
+     background-color: lightslategray     
+ }
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid rgb(102, 26, 26);;
+    text-align: left;
+    padding: 5px;
+  }
+  
+  tr:nth-child(even) {
+    background-color:lightskyblue ;
+  }
+
+  tr:nth-child(odd) {
+    background-color:lightgrey ;
+  }
+
+ @media screen and (min-width: 820px) {
+
+    .grid-container-oferta {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 0.2fr auto 0.1fr;
+        grid-template-areas: "logo menu menu" "title title title" "oferta oferta oferta" "footer footer footer";
+        grid-gap: 10px;
+      }
+      
+    .logo { grid-area: logo; }
+
+    .logo img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    
+    .menu { grid-area: menu; }
+
+    .menu a {
+        padding: 20px;
+    }
+    
+    .title { grid-area: title; }
+      
+    .oferta { grid-area: oferta; }
+      
+    .footer { 
+        grid-area: footer; }
+}
